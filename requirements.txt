@@ -1,0 +1,2 @@
+ipwhois==0.15.1
+dnspython==1.15.0
