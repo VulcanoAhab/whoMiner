@@ -32,10 +32,9 @@ class EnrichDomain:
            or not  self._response["dns"].get("a")):
            return
         for ipstr in self._response["dns"]["a"]:
-            ipstr=ipstr.address
             bw=BasicIPWho(ipstr)
             self._response["ipWho"].update({ipstr:bw.ipWho})
-            
+
     @property
     def DNS(self):
         """

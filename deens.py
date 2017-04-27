@@ -33,5 +33,7 @@ class Resolver:
         try:
             return self.__getattribute__(attr)
         except AttributeError:
-            setattr(self, attr, list(self.query(self._domain, attr)))
+            genis=self.query(self._domain, attr)
+            data=[rdata.to_text() for rdata in genis if rdata]
+            setattr(self, attr, data)
             return self.__getattribute__(attr)
