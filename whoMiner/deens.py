@@ -28,7 +28,7 @@ class Resolver:
     def __getattr__(self, attr):
         """
         """
-        if attr not in {"A","NS","MX","TXT"}:
+        if attr not in {"A","NS","MX","TXT", "SOA"}:
             raise AttributeError("[-] Unkown attribute")
         try:
             return self.__getattribute__(attr)

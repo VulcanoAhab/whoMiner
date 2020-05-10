@@ -1,8 +1,15 @@
+import os
 import re
 
 
 ### baseFiles
-_ASN_FILE="asn_name_dict.txt"
+_HERE=os.path.abspath(__file__)
+_HOME=os.path.expanduser("~")
+_HERE=_HERE.replace(_HOME, "")
+_ASN_FILE_NAME="asn_name_dict.txt"
+_ASN_FILE=os.path.join(_HOME,
+    os.path.join(*_HERE.split("/")[:-1], _ASN_FILE_NAME))
+
 
 ### data producers
 def build_asn_dict():

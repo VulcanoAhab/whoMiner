@@ -1,5 +1,5 @@
-from deens import Resolver
-from aipees import BasicIPWho
+from whoMiner.deens import Resolver
+from whoMiner.aipees import BasicIPWho
 
 class EnrichDomain:
     """
@@ -13,6 +13,7 @@ class EnrichDomain:
             "dns":{},
             "ipWho":{}
             }
+        self._run()
 
     def _DNS(self):
         """
@@ -53,7 +54,7 @@ class EnrichDomain:
         """
         return self._response
 
-    def run(self):
+    def _run(self):
         """
         """
         self._DNS()

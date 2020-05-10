@@ -1,4 +1,4 @@
-from aesen import build_asn_dict
+from whoMiner.aesen import build_asn_dict
 from ipwhois import IPWhois
 
 import json
